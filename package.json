@@ -1,25 +1,29 @@
 {
+	"name": "remotion-skills",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Remotion Skills - Video creation templates and best practices",
 	"repository": {
-		"url": "https://github.com/remotion-dev/remotion/tree/main/packages/skills"
+		"url": "https://github.com/inematds/remotion-skills"
 	},
 	"scripts": {
-		"dev": "remotion studio"
+		"dev": "remotion studio",
+		"build": "remotion render",
+		"render": "remotion render"
 	},
-	"name": "@remotion/skills",
-	"private": true,
-	"version": "4.0.407",
+	"dependencies": {
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"remotion": "^4.0.242",
+		"@remotion/cli": "^4.0.242",
+		"@remotion/bundler": "^4.0.242",
+		"@remotion/shapes": "^4.0.242",
+		"@remotion/lottie": "^4.0.242",
+		"@remotion/google-fonts": "^4.0.242"
+	},
 	"devDependencies": {
-		"@remotion/eslint-config-internal": "^4.0.0",
-		"eslint": "catalog:",
-		"@remotion/bundler": "^4.0.0",
-		"remotion": "^4.0.0",
-		"react": "catalog:",
-		"react-dom": "catalog:",
-		"@remotion/shapes": "^4.0.0",
-		"@remotion/three": "^4.0.0",
-		"@remotion/cli": "^4.0.0",
-		"@typescript/native-preview": "catalog:",
-		"@remotion/lottie": "^4.0.0",
-		"@remotion/google-fonts": "^4.0.0"
+		"typescript": "^5.7.3",
+		"@types/react": "^18.3.18",
+		"@types/node": "^22.10.7"
 	}
 }

@@ -3,13 +3,14 @@ import {MyAnimation as BarChartAnimation} from '../skills/remotion/rules/assets/
 import {MyAnimation as TypewriterAnimation} from '../skills/remotion/rules/assets/text-animations-typewriter';
 import {MyAnimation as WordHighlightAnimation} from '../skills/remotion/rules/assets/text-animations-word-highlight';
 import {PromoVideo, exampleSiteData} from './PromoVideo';
+import {InemaShowcase} from './PromoVideo/InemaShowcase';
 import type {SiteData} from './PromoVideo';
 
 export const RemotionRoot = () => {
 	return (
 		<>
 			{/* Vídeos Promocionais */}
-			<Folder name="Promo Videos">
+			<Folder name="Promo-Videos">
 				<Composition
 					id="PromoVideo"
 					component={PromoVideo}
@@ -22,7 +23,7 @@ export const RemotionRoot = () => {
 					}}
 				/>
 				<Composition<{ siteData: SiteData }>
-					id="PromoVideoCustom"
+					id="InemaClub"
 					component={PromoVideo}
 					durationInFrames={300}
 					fps={30}
@@ -30,32 +31,71 @@ export const RemotionRoot = () => {
 					height={1080}
 					defaultProps={{
 						siteData: {
-							url: 'https://seusite.com',
-							title: 'Seu Produto',
-							description: 'Descrição incrível do seu produto',
+							url: 'https://inema.club',
+							title: 'INEMA.CLUB',
+							description: 'Crie sua Equipe, Seu Time. Nós Ajudamos. Prepare-se para o futuro com IA e Robótica.',
 							stats: [
-								{ label: 'Usuários', value: '100K+' },
-								{ label: 'Países', value: '50+' },
-								{ label: 'Uptime', value: '99.9%' },
-								{ label: 'Reviews', value: '4.9★' },
+								{ label: 'Repositórios', value: '18+' },
+								{ label: 'Canais Telegram', value: '20+' },
+								{ label: 'Cursos', value: '4+' },
+								{ label: 'Comunidade', value: '⭐' },
 							],
 							colors: {
-								primary: '#3b82f6',
+								primary: '#6366f1',
 								secondary: '#8b5cf6',
-								accent: '#f59e0b',
+								accent: '#22c55e',
 								background: '#0a0a0a',
 								text: '#ffffff',
 							},
 							screenshots: [],
 							features: [
-								'Feature 1',
-								'Feature 2',
-								'Feature 3',
-								'Feature 4',
+								'Trilha para Iniciantes',
+								'Comunidade Telegram',
+								'Projetos Open-Source',
+								'Formação em IA e Prompts',
 							],
 							cta: {
-								text: 'Começar Agora',
-								url: 'https://seusite.com/signup',
+								text: 'Faça seu Cadastro',
+								url: 'https://inema.vip',
+							},
+						},
+					}}
+				/>
+				<Composition<{ siteData: SiteData }>
+					id="InemaTV"
+					component={InemaShowcase}
+					durationInFrames={300}
+					fps={30}
+					width={1920}
+					height={1080}
+					defaultProps={{
+						siteData: {
+							url: 'https://inema.club',
+							title: 'INEMA.CLUB',
+							description: 'Crie sua Equipe, Seu Time. Nós Ajudamos. Prepare-se para o futuro com IA e Robótica.',
+							stats: [
+								{ label: 'Repositórios', value: '18+' },
+								{ label: 'Canais Telegram', value: '20+' },
+								{ label: 'Cursos', value: '4+' },
+								{ label: 'Comunidade', value: '⭐' },
+							],
+							colors: {
+								primary: '#6366f1',
+								secondary: '#8b5cf6',
+								accent: '#22c55e',
+								background: '#0a0a0a',
+								text: '#ffffff',
+							},
+							screenshots: [],
+							features: [
+								'Trilha para Iniciantes',
+								'Comunidade Telegram',
+								'Projetos Open-Source',
+								'Formação em IA e Prompts',
+							],
+							cta: {
+								text: 'Faça seu Cadastro',
+								url: 'https://inema.vip',
 							},
 						},
 					}}
