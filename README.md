@@ -12,6 +12,41 @@ Este repositório contém:
 
 ## Instalação
 
+### Opção 1: Instalar como Skill do Claude Code
+
+Copie a pasta `skills/remotion` para o diretório `.claude/skills/` do seu projeto:
+
+```bash
+# No seu projeto
+mkdir -p .claude/skills
+
+# Clonar e copiar a skill
+git clone git@github.com:inematds/remotion-skills.git /tmp/remotion-skills
+cp -r /tmp/remotion-skills/skills/remotion .claude/skills/
+
+# Estrutura final
+# .claude/skills/remotion/
+# ├── SKILL.md
+# └── rules/
+#     ├── animations.md
+#     ├── compositions.md
+#     └── ... (28 guias)
+```
+
+**Windows (PowerShell):**
+```powershell
+# Criar diretório
+New-Item -ItemType Directory -Force -Path .claude\skills
+
+# Clonar e copiar
+git clone git@github.com:inematds/remotion-skills.git $env:TEMP\remotion-skills
+Copy-Item -Recurse $env:TEMP\remotion-skills\skills\remotion .claude\skills\
+```
+
+O Claude Code reconhecerá automaticamente a skill e usará as boas práticas ao trabalhar com Remotion.
+
+### Opção 2: Clonar o Repositório Completo
+
 ```bash
 # Clonar o repositório
 git clone git@github.com:inematds/remotion-skills.git
@@ -22,6 +57,12 @@ npm install
 
 # Iniciar o Remotion Studio
 npm run dev
+```
+
+### Opção 3: One-liner (Unix/Mac)
+
+```bash
+mkdir -p .claude/skills && curl -sL https://github.com/inematds/remotion-skills/archive/main.tar.gz | tar -xz --strip-components=2 -C .claude/skills remotion-skills-main/skills/remotion
 ```
 
 ## Tech Stack
