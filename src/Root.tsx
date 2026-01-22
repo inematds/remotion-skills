@@ -4,6 +4,8 @@ import {MyAnimation as TypewriterAnimation} from '../skills/remotion/rules/asset
 import {MyAnimation as WordHighlightAnimation} from '../skills/remotion/rules/assets/text-animations-word-highlight';
 import {PromoVideo, exampleSiteData} from './PromoVideo';
 import {InemaShowcase} from './PromoVideo/InemaShowcase';
+import {SisnemaShowcase} from './PromoVideo/SisnemaShowcase';
+import {InemaClubShowcase} from './PromoVideo/InemaClubShowcase';
 import type {SiteData} from './PromoVideo';
 
 export const RemotionRoot = () => {
@@ -99,6 +101,22 @@ export const RemotionRoot = () => {
 							},
 						},
 					}}
+				/>
+				<Composition
+					id="SisnemaTV"
+					component={SisnemaShowcase}
+					durationInFrames={360}
+					fps={30}
+					width={1920}
+					height={1080}
+				/>
+				<Composition
+					id="InemaClub45s"
+					component={InemaClubShowcase}
+					durationInFrames={1350}
+					fps={30}
+					width={1920}
+					height={1080}
 				/>
 			</Folder>
 

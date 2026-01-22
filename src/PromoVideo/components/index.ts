@@ -4,3 +4,4 @@ export { FeaturesScene } from './FeaturesScene';
 export { CTAScene } from './CTAScene';
 export { Transition, GlitchTransition } from './Transition';
 export { TVShowcaseScene } from './TVShowcaseScene';
+export { RotatingTVScene } from './RotatingTVScene';
